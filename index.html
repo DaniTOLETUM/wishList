@@ -12,16 +12,20 @@
       <h1 id="titulo">Propósitos Año Nuevo</h1>
     </header>
     <form id="form">
-      <input id="input" />
-      <button id="btn-create">Crear</button>
+      <input id="input" type="text" />
+      <button id="btn-create" type="button">Crear Propósito</button>
     </form>
     <section id="listas">
-      <div id="propositos">
-        <h3 id="subtitulo">Lista de Propósitos</h3>
+      <div class="lista">
+        <h3 id="subtitulo">
+          Lista de Propósitos<span id="pendientes">0</span>
+        </h3>
         <ul id="lista-propositos"></ul>
       </div>
-      <div id="cumplidos">
-        <h3 id="subtitulo">Propósitos Cumplidos</h3>
+      <div class="lista">
+        <h3 id="subtitulo">
+          Propósitos Cumplidos<span id="cumplidos">0</span>
+        </h3>
         <ul id="lista-cumplidos"></ul>
       </div>
     </section>

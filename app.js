@@ -13,3 +13,12 @@ console.log(propositos);
 console.log(cumplidos);
 
 
+// creating a proposito
+btn.onclick = createPropo;
+
+function createPropo(e) {
+    console.log("button clicked");
+    let entrada = input.value;
+    console.log(entrada);
+}
+
