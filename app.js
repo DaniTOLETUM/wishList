@@ -11,13 +11,6 @@ let = document.getElementById("cumplidos");
 let propsCounter;
 let achievedCounter;
 
-//Function to eliminate elements from lists
-// function eliminar (li){
-//     console.log("eliminando li ", li);
-//     li.remove();
-
-// }
-
 //Function to create Cumplidos completed list elements
 function createCompleted(li) {
   li = li.slice(0, -2);
@@ -26,9 +19,7 @@ function createCompleted(li) {
   let completedLi = document.createElement("li");
   completedLi.textContent = li;
   //add the element to completed list
-  console.log("before ", cumplidos);
   cumplidos.appendChild(completedLi);
-  console.log("after ", cumplidos);
 
   //increment the number of cumplidos
   achievedCounter = cantidadCumplidos.innerHTML;
@@ -68,12 +59,16 @@ function createPropo(e) {
 
   //buttons functionality
   btnEliminar.onclick = () => {
-    // eliminar(e, li);
     li.remove();
+    // propsCounter = cantidadPendientes.innerHTML;
+    propsCounter--;
+    cantidadPendientes.innerHTML = propsCounter;
   };
 
   btnCompleted.onclick = () => {
     createCompleted(li.innerText);
     li.remove();
+    propsCounter--;
+    cantidadPendientes.innerHTML = propsCounter;
   };
 }
