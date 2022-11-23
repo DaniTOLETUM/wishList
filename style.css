@@ -1,0 +1,31 @@
+body {
+  max-width: fit-content;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#header {
+  align-items: center;
+}
+
+#titulo {
+  text-align: center;
+}
+
+#form {
+  display: flex;
+  justify-content: center;
+}
+
+#listas {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+#propositos,
+#cumplidos {
+  margin: 3em;
+}
