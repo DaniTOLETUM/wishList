@@ -42,6 +42,7 @@ function createPropo(e) {
 
   //add the element to the list
   propositos.appendChild(li);
+  input.value = "";
 
   //increment the number of propositos
   propsCounter = cantidadPendientes.innerHTML;
