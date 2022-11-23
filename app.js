@@ -9,27 +9,56 @@ let cantidadPendientes = document.getElementById("pendientes");
 let cantidadCumplidos = document.getElementById("cumplidos");
 let propsCounter;
 
+//Function to eliminate elements from lists
+// function eliminar (li){
+//     console.log("eliminando li ", li);
+//     li.remove();
+
+// }
+
+//Function to create completed list elements
+function createCompleted(li) {
+  console.log("completada ", li);
+}
 
 // creating a proposito
 btn.onclick = createPropo;
 
 function createPropo(e) {
-    console.log(e);
-    //tqke the vqlue from input
-    let entrada = input.value;
-    console.log(entrada);
+  console.log(e);
+  //tqke the vqlue from input
+  let entrada = input.value;
+  console.log(entrada);
 
-    //create an element for the list
-    let li = document.createElement("li");
-    li.textContent = entrada;
+  //create an element for the list
+  let li = document.createElement("li");
+  li.textContent = entrada;
 
-    //add the element to the list 
-    propositos.appendChild(li);
+  //add the element to the list
+  propositos.appendChild(li);
 
-    //increment the number of propositos
-    propsCounter = cantidadPendientes.innerHTML;
-    propsCounter ++;
-    cantidadPendientes.innerHTML = propsCounter
+  //increment the number of propositos
+  propsCounter = cantidadPendientes.innerHTML;
+  propsCounter++;
+  cantidadPendientes.innerHTML = propsCounter;
 
+  //add buttons to each li element in propositos
+  let btnEliminar = document.createElement("span");
+  btnEliminar.textContent = "X";
+  li.appendChild(btnEliminar);
+
+  let btnCompleted = document.createElement("span");
+  btnCompleted.textContent = "V";
+  li.appendChild(btnCompleted);
+
+  //buttons functionality
+  btnEliminar.onclick = () => {
+    // eliminar(e, li);
+    li.remove();
+  };
+
+  btnCompleted.onclick = () => {
+    createCompleted(li);
+    li.remove();
+  };
 }
-
