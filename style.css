@@ -28,3 +28,8 @@ body {
 .lista {
   margin: 3em;
 }
+
+span,
+btn {
+  margin: 1em;
+}

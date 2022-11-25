@@ -34,6 +34,9 @@ function createPropo(e) {
   console.log(e);
   //take the vqlue from input
   let entrada = input.value;
+  if (entrada === "") {
+    return;
+  }
   console.log(entrada);
 
   //create an element for the list
